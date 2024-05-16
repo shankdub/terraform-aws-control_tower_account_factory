@@ -311,7 +311,7 @@ variable "tf_backend_secondary_region" {
 variable "terraform_token" {
   type        = string
   description = "Terraform token for Cloud or Enterprise"
-  default     = "null" # Non-sensitive default value #tfsec:ignore:general-secrets-no-plaintext-exposure
+  #default     = "null" # Non-sensitive default value #tfsec:ignore:general-secrets-no-plaintext-exposure
   sensitive   = true
   validation {
     condition     = length(var.terraform_token) > 0
