@@ -45,7 +45,7 @@ variable "aft_framework_repo_url" {
 
 variable "aft_framework_repo_git_ref" {
   description = "Git branch from which the AFT framework should be sourced from"
-  default     = null
+  default     = "main"
   type        = string
 }
 
