@@ -89,7 +89,7 @@ variable "backup_recovery_point_retention" {
 variable "log_archive_bucket_object_expiration_days" {
   description = "Amount of days to keep the objects stored in the AFT logging bucket"
   type        = number
-  default     = 365
+  default     = 30
   validation {
     condition     = var.log_archive_bucket_object_expiration_days > 0
     error_message = "Log_archive_bucket_object_expiration_days must be an integer greater than 0."
