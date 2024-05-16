@@ -322,7 +322,7 @@ variable "terraform_token" {
 variable "terraform_org_name" {
   type        = string
   description = "Organization name for Terraform Cloud or Enterprise"
-  default     = "null"
+  default     = "Robertog169"
   validation {
     condition     = length(var.terraform_org_name) > 0
     error_message = "Variable var: terraform_org_name cannot be empty."
