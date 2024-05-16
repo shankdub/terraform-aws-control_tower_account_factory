@@ -35,7 +35,7 @@ variable "audit_account_id" {
 
 variable "aft_framework_repo_url" {
   description = "Git repo URL where the AFT framework should be sourced from"
-  default     = "https://github.com/aws-ia/terraform-aws-control_tower_account_factory.git"
+  default     = "https://github.com/Shankdub/terraform-aws-control_tower_account_factory.git"
   type        = string
   validation {
     condition     = length(var.aft_framework_repo_url) > 0
@@ -180,7 +180,7 @@ variable "aft_feature_delete_default_vpcs_enabled" {
 variable "vcs_provider" {
   description = "Customer VCS Provider - valid inputs are codecommit, bitbucket, github, or githubenterprise"
   type        = string
-  default     = "codecommit"
+  default     = "github"
   validation {
     condition     = contains(["codecommit", "bitbucket", "github", "githubenterprise"], var.vcs_provider)
     error_message = "Valid values for var: vcs_provider are (codecommit, bitbucket, github, githubenterprise)."
